@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Componente principale che avvolge l'intera applicazione per fornire le funzionalità di routing.
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
 
 import SocialBar from './Components/SocialBar/SocialBar.js';
 import SearchBar from './Components/SearchBar/SearchBar.js';
@@ -23,7 +23,7 @@ import './App.css';
 
 function App() {
   return (
-    <HashRouter>
+   
       <div className='main_div'>
         <SocialBar position="header">
           <SearchBar />
@@ -58,7 +58,7 @@ function App() {
           <SocialBar position="footer" />
         </Footer>
       </div>
-    </HashRouter> 
+    
   );
 }
 
