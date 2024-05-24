@@ -1,6 +1,6 @@
 {
   "name": "blog",
-  "homepage": "https://fedebramb.github.io/blog/",
+  "homepage": "https://FedeBramb.github.io/blog/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
