@@ -23,7 +23,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router basename="/blog">
+    <HashRouter basename="/blog">
       <div className='main_div'>
         <SocialBar position="header">
           <SearchBar />
@@ -58,7 +58,7 @@ function App() {
           <SocialBar position="footer" />
         </Footer>
       </div>
-    </Router> 
+    </HashRouter> 
   );
 }
 
