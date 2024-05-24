@@ -36,7 +36,7 @@ function Navbar() {
       {!isSmallScreen && (
         <React.Fragment>
           <Link to="/" className="nav-item first">HOME</Link>
-          <Link to="/cookbook" className="nav-item second">RICETTE</Link>
+          <Link to="/cookbook" className="nav-item second">RICETTEe</Link>
           <img src={logo} className='third' alt='logo'></img>
           <Link to="/glossario" className="nav-item fourth">GLOSSARIO</Link>
           <Link to="/contatti" className="nav-item fifth">CONTATTI</Link>
