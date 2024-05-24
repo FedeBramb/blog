@@ -23,7 +23,7 @@ import './App.css';
 
 function App() {
   return (
-   
+    
       <div className='main_div'>
         <SocialBar position="header">
           <SearchBar />
@@ -34,7 +34,7 @@ function App() {
           <Navbar />
         </UpperBody>
         <Routes>
-          <Route path="/" element={
+          <Route path="/blog" element={
             <>
               <Carousel />
               <Middle>
@@ -47,10 +47,10 @@ function App() {
               </Middle></>
           }>
           </Route>
-          <Route path="/cookbook" element={
+          <Route path="/blog/cookbook" element={
             <CookBook/>}>
           </Route>
-          <Route path="/cookbook/:recipeName" element={
+          <Route path="/blog/cookbook/:recipeName" element={
             <Recipe/>}>
           </Route>
         </Routes>
