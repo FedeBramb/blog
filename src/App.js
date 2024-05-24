@@ -23,7 +23,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router basename="">
+    <Router basename="/blog">
       <div className='main_div'>
         <SocialBar position="header">
           <SearchBar />
