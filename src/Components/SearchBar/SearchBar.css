@@ -1,0 +1,99 @@
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Per rendere la barra di ricerca responsive */
+    position: relative;
+}
+  
+.search-form form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+  
+.search-input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 16px; /* Aumenta la dimensione del font */
+    max-width: 400px; /* Limita la larghezza massima dell'input */
+    background-color: #00a4aa;
+    border: 2px solid #00a4aa;
+}
+
+.search-input:focus {
+    outline: none; /* Rimuove l'outline di default durante la selezione */
+    border: 2px solid #00a4aa; /* Aggiunge il bordo durante il focus */
+}
+
+.search-input::-webkit-input-placeholder {
+    color: #323232;
+}
+
+.search-input:-moz-placeholder {
+    color: #323232;  
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #00a4aa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.search-button:hover {
+    background-color: #00a4aa;
+}
+
+.search-button i {
+    color: #323232;
+}
+  
+.result-dropdown {
+    position: absolute; /* Posizione assoluta per il dropdown */
+    top: 100%; /* Posiziona il dropdown immediatamente sotto la search bar */
+    left: 0;
+    width: 100%; /* Stessa larghezza della search bar */
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1000; /* Assicura che il dropdown sia sopra altri elementi */
+}
+
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1rem; /* Dimensione del font relativa */
+}
+  
+.dropdown-item p {
+    margin: 0;
+    font-size: 1rem; /* Dimensione del font relativa */
+    text-decoration: none;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-item a {
+    text-decoration: none; /* Rimuove la sottolineatura dai link */
+    color: inherit; /* Mantiene il colore del testo del link */
+}
+  /* Stili per rendere responsivo */
+@media screen and (max-width: 600px) {
+    .search-input {
+        width: 100%; /* Occupa tutto lo spazio disponibile su schermi più piccoli */
+        margin-right: 0; /* Rimuove il margine destro */
+    }
+
+    .dropdown-item {
+        font-size: 0.875rem; /* Riduce la dimensione del font sui dispositivi mobili */
+    }
+
+    .dropdown-item h2 {
+        font-size: 0.875rem; /* Riduce la dimensione del font sui dispositivi mobili */
+    }
+}

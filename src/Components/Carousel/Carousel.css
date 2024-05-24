@@ -1,0 +1,145 @@
+.carousel {
+    position: relative;
+    width: 78vw;
+    margin: 0 auto;
+    min-height: 30vh;
+    column-gap: 3rem;
+    padding-block: min(20vh, 3rem);
+    border-bottom: 1px solid black;
+}
+
+@media screen and (min-width: 48rem) {
+    .carousel {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.carousel-content span {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 1 rem;
+    color: #717171;
+}
+
+.carousel-content h1 {
+    text-transform: capitalize;
+    letter-spacing: 0.8px;
+    font-size: 4rem;
+    line-height: 1.1;
+    background-color: #00a4aa;
+    background-image: linear-gradient(45deg, #00a4aa, #00073b);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.carousel-content .carousel-hr {
+    display: block;
+    background: #00a4aa;
+    height:  0.25rem;
+    width: 6.25rem;
+    border: none;
+    margin: 1.125rem 0 1.875rem 0;
+}
+
+.carousel-content p {
+    line-height: 1.6;
+}
+
+/*con inline-block gli elementi vengono visualizzati orrizzontalemente come quelli inline ma in questo modo
+  possiamo modificare le dimensioni */
+.slider-btn {
+    display: inline-block;
+    color: #717171;
+    background: #fff;
+    padding: 0.625rem 1.875rem;
+    margin-top: 2.125rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #c2c2c2;
+    border-radius: 3.125rem;
+    transition: 0.3s ease-in-out;
+}
+
+.slider-btn:hover {
+    border: 0.12rem solid #00a4aa;
+    color: #00a4aa;
+}
+
+.myswiper {
+    width: 100%;
+}
+
+.myswiper-slider {
+   width: 18.75rem;
+   height: 28.125rem;
+   background-size: cover;
+   background-position: center;
+}
+
+.myswiper-slider div {
+    display: none;
+    opacity: 0;
+    padding-bottom: 0.625rem;
+}
+
+.swiper-slide-active div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    opacity: 1;
+    background-color: transparent;
+    height: 100%;
+}
+
+/* Applica un filtro di oscuramento alle immagini non attive */
+.swiper-slide:not(.swiper-slide-active) {
+    filter: brightness(0.7);
+}
+
+/*sovrascrivere il valore di align-items del contenitore padre per un elemento specifico.*/
+.swiper-slide-active div .slider-btn {
+    align-self: flex-start;
+}
+
+.myswiper-slider h2 {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin-bottom: 0.625rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+}
+
+.myswiper-slider button {
+    margin: 1.25rem 1.5rem 3.5rem;
+}
+
+.myswiper-slider button:hover {
+    color: #00a4aa;
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+    background: #fff;
+}
+
+/* Posizionamo le due immagini "sotto" gli altri elementi, abbassando lo z-index*/
+.caffe {
+    position: absolute;
+    top: -2rem;
+    left: -7rem;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.ciambella {
+    position: absolute;
+    bottom: -4rem;
+    right: -9rem;
+    z-index: -1;
+    opacity: 0.6;
+}

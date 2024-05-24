@@ -1,0 +1,81 @@
+.recipeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    gap: 12px;
+}
+
+.recipeContainer  > :not(:last-child) {
+    border-bottom: 1px solid black;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section img {
+    width: 98%;
+    transition: 180ms opacity ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (max-width: 1100px) {
+    .recipeContainer {
+        width: 78%;
+        margin-top: 3%;
+    }
+    .section img {
+        max-width: 100%;
+    }
+    
+}
+
+.section h1 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 3em;
+    letter-spacing: 0.8px;
+    background-color: #00a4aa;
+    background-image: linear-gradient(45deg, #00a4aa, #00073b);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+.title-div {
+    margin-bottom: 2vh;
+}
+
+.title-div .title-hr { 
+    background: #00a4aa;
+    height:  0.25rem;
+    width: 12.25rem;
+    border: none; 
+}
+
+.section h5 {
+    margin: 2% 1% 0 2%;
+    text-align: left;
+    font-weight: 350;
+    font-size: clamp(1rem, 2.5vw, 1.2rem); /* dimensione minima, dimensione preferita, dimensione massima */
+}
+
+.recipe-button {
+    padding: 5px 10px; /* Aggiusta il padding per dimensioni desiderate */
+    background-color: #ffffff; /* Colore di sfondo del bottone */
+    color: rgb(25, 24, 32); /* Colore del testo */
+    border: 1px solid rgb(21, 21, 26); /* Bordo sottile nero */
+    margin-top: 6%;
+    margin-bottom: 12%;
+    
+}
+  
+.recipe-button:hover {
+    background-color: #e0e0e0; /* Cambia il colore di sfondo al passaggio del mouse */
+    
+}
+
+
+

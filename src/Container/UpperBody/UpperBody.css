@@ -1,0 +1,20 @@
+.site-header {
+  width: 78%;
+}
+
+.upper-body {
+  display: flex;
+  justify-content: space-between;
+  gap: 20%;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+@media screen and (max-width: 1196px) {
+  .upper-body {
+    display: flex;
+    flex-direction: column; /* Cambia la direzione del layout a colonna */
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,6 @@
+.middle {
+    width: 78vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
