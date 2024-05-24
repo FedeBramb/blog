@@ -23,7 +23,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/blog">
       <div className='main_div'>
         <SocialBar position="header">
           <SearchBar />
@@ -34,7 +34,7 @@ function App() {
           <Navbar />
         </UpperBody>
         <Routes>
-          <Route path="/blog" element={
+          <Route path="/" element={
             <>
               <Carousel />
               <Middle>
