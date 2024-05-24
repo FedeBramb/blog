@@ -23,7 +23,7 @@ import './App.css';
 
 function App() {
   return (
-    <HashRouter basename="/blog">
+    <HashRouter>
       <div className='main_div'>
         <SocialBar position="header">
           <SearchBar />
