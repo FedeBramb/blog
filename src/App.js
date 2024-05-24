@@ -34,7 +34,7 @@ function App() {
           <Navbar />
         </UpperBody>
         <Routes>
-          <Route path="/" element={
+          <Route path="/blog" element={
             <>
               <Carousel />
               <Middle>
