@@ -50,7 +50,7 @@ function App() {
           <Route path="/cookbook" element={
             <CookBook/>}>
           </Route>
-          <Route path="cookbook/:recipeName" element={
+          <Route path="/cookbook/:recipeName" element={
             <Recipe/>}>
           </Route>
         </Routes>
