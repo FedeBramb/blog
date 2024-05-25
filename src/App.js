@@ -34,7 +34,7 @@ function App() {
           <Navbar />
         </UpperBody>
         <Routes>
-          <Route path="/blog" element={
+          <Route path="/" element={
             <>
               <Carousel />
               <Middle>
@@ -47,10 +47,10 @@ function App() {
               </Middle></>
           }>
           </Route>
-          <Route path="/blog/cookbook" element={
+          <Route path="/cookbook" element={
             <CookBook/>}>
           </Route>
-          <Route path="/blog/cookbook/:recipeName" element={
+          <Route path="cookbook/:recipeName" element={
             <Recipe/>}>
           </Route>
         </Routes>
