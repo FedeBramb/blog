@@ -52,7 +52,7 @@ function Navbar() {
             {isOpen && (
                 <div class="dropdown-content">
                   <Link to="/" className="dropItem">HOME</Link>
-                  <Link to="/ricette" className="dropItem">RICETTE</Link>
+                  <Link to="/cookbook" className="dropItem">RICETTE</Link>
                   <Link to="/glossario" className="dropItem">GLOSSARIO</Link>
                   <Link to="/contatti" className="dropItem">CONTATTI</Link>
                 </div>
