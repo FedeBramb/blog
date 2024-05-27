@@ -16,24 +16,24 @@ const CookBook = () => {
       {recipes.map(([key, { title, imagesCookBook }], index) => {
         console.log(imagesCookBook); // Aggiungi questo per loggare imagesCookBook
         return (
-          <div className='card' key={key}>
-            <div className='poster-container'>
-              <LazyLoadImage 
-                key={`${title}-${index}`} 
-                src={require(`../../assets${imagesCookBook}`)} 
-                alt={`pic-${index}`}
-                className='poster'
-              />
-            </div>
-            <div className='title-container'>
-              <div className='title-content'>
-                <Link to={`/cookbook/${key}`} className='link-custom'>
+          <Link to={`/cookbook/${key}`} className='link-custom'>
+            <div className='card' key={key}>
+              <div className='poster-container'>
+                <LazyLoadImage 
+                  key={`${title}-${index}`} 
+                  src={require(`../../assets${imagesCookBook}`)} 
+                  alt={`pic-${index}`}
+                  className='poster'
+                />
+              </div>
+              <div className='title-container'>
+                <div className='title-content'>
                   <p className='title-card' key={`${index}-p`}>{title}</p>
-                  <button className="read-button">Scopri</button>
-                </Link>
+                  <button className="read-button">Scopri</button>  
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
         );
       })}
     </div>
