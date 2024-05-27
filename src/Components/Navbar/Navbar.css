@@ -61,6 +61,8 @@
 
 .logo-small-view {
   margin: auto;
+  width: 20%;
+  min-width: 112px;
 }
 
 .dropcase {
@@ -72,15 +74,19 @@
 .menu-button {
   width: 100%; /* Imposta la larghezza automatica per adattarsi al contenuto */
   display: inline-block; /* Imposta il display su inline-block per adattarsi alla larghezza automatica */
-  margin-left: 1%;
   background-color: rgb(255, 255, 255);
   outline: none;
   border: none;
   font-size: 1.4rem;
+  margin-top: 2%;
 }
 
 .menu-button:focus {
   outline: none; /* Removes the default outline when the button has focus */
+}
+
+.menu-button:hover {
+  cursor: pointer;
 }
   
 .dropdown-content {
@@ -91,7 +97,6 @@
   width: 100%;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 10;
-  margin-left: 1%;
 }
   
   /* Links inside the dropdown */
@@ -103,7 +108,7 @@
 }
   
   /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {background-color: #00a4aa;}
   
   /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}

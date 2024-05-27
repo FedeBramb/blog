@@ -54,7 +54,7 @@
   
 .result-dropdown {
     position: absolute; /* Posizione assoluta per il dropdown */
-    top: 100%; /* Posiziona il dropdown immediatamente sotto la search bar */
+    top: 107%; /* Posiziona il dropdown immediatamente sotto la search bar */
     left: 0;
     width: 100%; /* Stessa larghezza della search bar */
     background-color: white;

@@ -36,7 +36,7 @@ const Recipe = ({ article }) => {
           <h1 className="recipe_h1">Ingredienti</h1>
           <div className="ingredients">
             {recipe.ingredients.map((p, index) => (
-              <p key={index} className="ingredients-p">{p}</p>
+              <li key={index} className="ingredients-p">{p}</li>
             ))}
           </div>
         </div>

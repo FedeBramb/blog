@@ -74,7 +74,7 @@ function Carousel() {
           className='myswiper-slider'>
             <div>
               <h2>{title}</h2>
-              <Link to={`/recipe/${recipeName}`}>
+              <Link to={`/cookbook/${recipeName}`}>
                 <button className='slider-btn'>Explore</button>
               </Link>
             </div>

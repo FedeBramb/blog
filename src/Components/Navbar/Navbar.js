@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import logo from '../../assets/imagesLogo/logo.png';
+import logoMobile from '../../assets/imagesLogo/logoMobile.webp';
 
 import './Navbar.css';
 
@@ -36,7 +37,7 @@ function Navbar() {
       {!isSmallScreen && (
         <React.Fragment>
           <Link to="/" className="nav-item first">HOME</Link>
-          <Link to="/cookbook" className="nav-item second">RICETTEe</Link>
+          <Link to="/cookbook" className="nav-item second">RICETTE</Link>
           <img src={logo} className='third' alt='logo'></img>
           <Link to="/glossario" className="nav-item fourth">GLOSSARIO</Link>
           <Link to="/contatti" className="nav-item fifth">CONTATTI</Link>
@@ -44,17 +45,17 @@ function Navbar() {
       )}
       {isSmallScreen && (
         <React.Fragment>
-          <img src={logo} className='logo-small-view' alt='logo'></img>
+          <img src={logoMobile} className='logo-small-view' alt='logo'></img>
           <div className="dropcase">
             <button className="menu-button" onClick={toggleMenu}>
               MENU
             </button>
             {isOpen && (
                 <div class="dropdown-content">
-                  <Link to="/" className="dropItem">HOME</Link>
-                  <Link to="/cookbook" className="dropItem">RICETTE</Link>
-                  <Link to="/glossario" className="dropItem">GLOSSARIO</Link>
-                  <Link to="/contatti" className="dropItem">CONTATTI</Link>
+                  <Link to="/" className="dropItem" onClick={toggleMenu}>HOME</Link>
+                  <Link to="/cookbook" className="dropItem" onClick={toggleMenu}>RICETTE</Link>
+                  <Link to="/glossario" className="dropItem" onClick={toggleMenu}>GLOSSARIO</Link>
+                  <Link to="/contatti" className="dropItem" onClick={toggleMenu}>CONTATTI</Link>
                 </div>
             )}
           </div>

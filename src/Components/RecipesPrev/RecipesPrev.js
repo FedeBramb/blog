@@ -16,7 +16,9 @@ function RecipesPrev() {
                             <h1>{title}</h1>
                             <hr className="title-hr" />
                         </div>
-                        <LazyLoadImage key={`${title}-${index}`} src={require(`../../assets${image}`)} alt={`pic-${index}`} />
+                        <Link to={`/cookbook/${key}`}>
+                            <LazyLoadImage key={`${title}-${index}`} src={require(`../../assets${image}`)} alt={`pic-${index}`} />
+                        </Link>
                         <h5>{description}</h5>
                         <Link to={`/cookbook/${key}`}>
                             <button className="recipe-button">Leggi la ricetta</button>

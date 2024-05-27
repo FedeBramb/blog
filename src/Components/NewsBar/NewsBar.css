@@ -39,12 +39,12 @@
 
 @media screen and (max-width: 1100px) {
     .newsbar {
-        grid-template-columns: repeat(3, 1fr); /* Una sola colonna */
-        grid-template-rows: 14% 20vh 20vh;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 15vh 20vh 20vh;
         margin: 0;
         position: static !important;
         min-width: 78%;
-        min-height: 100%;
+        min-height: 287px;
         padding-bottom: 0;
     }
 

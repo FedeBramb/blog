@@ -50,7 +50,7 @@ const SearchBar = () => {
         <div className="result-dropdown">
           {filteredRecipes.map(([key]) => (
             <div className="dropdown-item" key={key}>
-              <Link to={`/recipe/${key}`}>
+              <Link to={`/cookbook/${key}`}>
                 <p>{key.charAt(0).toUpperCase() + key.slice(1).replace("_", " ")}</p>
               </Link>
             </div>
