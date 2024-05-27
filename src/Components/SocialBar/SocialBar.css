@@ -25,6 +25,16 @@
     gap: 10px;
 }
 
+@media screen and (max-width: 880px) {
+    .social-bar {
+        justify-content: center;
+    }
+    
+    .icons {
+        display: none;
+    }
+}
+
 .space {
     width: 10%;
 }
