@@ -49,11 +49,10 @@
 @media screen and (max-width: 1100px) {
     .newsbar {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 15vh 20vh 20vh;
+        grid-template-rows: 15vh 1fr 1fr;
         margin: 0;
         position: static !important;
         min-width: 78%;
-        max-height: none;
         padding-bottom: 0;
     }
 
@@ -68,7 +67,23 @@
 }
 
 
-@media screen and (max-width: 733px) {
+@media screen and (max-width: 1040px) {
+    .newsbar {
+        grid-template-columns: repeat(2, 1fr); /* Due colonne con larghezza uguale */
+        grid-template-rows: 10.4% auto auto auto;
+    }
+
+    .news-title {
+        grid-column: 1 / span 2;   
+    }
+
+    .image-container {
+        min-height: 200px;
+        transition: 180ms opacity ease-in-out;
+    }
+}
+
+@media screen and (max-width: 586px) {
     .newsbar {
         grid-template-columns: 1fr;
         grid-template-rows: 15vh auto auto auto auto;
@@ -76,6 +91,7 @@
         position: static !important;
         min-width: 78%;
         padding-bottom: 0;
+        max-height: none;
     }
     .news-title {
         all: unset;   
