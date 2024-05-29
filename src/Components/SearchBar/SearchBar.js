@@ -28,6 +28,11 @@ const SearchBar = () => {
       setfilteredRecipes(results);
     }
   }, [searchInput, recipeData]);
+
+  const handleResultClick = () => {
+    setSearchInput('');
+    setfilteredRecipes([]);
+  };
   
 
   return (
@@ -41,8 +46,8 @@ const SearchBar = () => {
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
         />
-        <button type="submit" className="search-button">
-          <i className="fas fa-search"></i>
+        <button type="submit" className="search-button" aria-label="Cerca">
+          <i className="fas fa-search" aria-hidden="true"></i>
         </button>
       </form>
       {/*Controlliamo se il container è vuoto altrimenti non lo renderizziamo*/}
@@ -50,7 +55,7 @@ const SearchBar = () => {
         <div className="result-dropdown">
           {filteredRecipes.map(([key]) => (
             <div className="dropdown-item" key={key}>
-              <Link to={`/cookbook/${key}`}>
+              <Link to={`/cookbook/${key}`} onClick={handleResultClick}>
                 <p>{key.charAt(0).toUpperCase() + key.slice(1).replace("_", " ")}</p>
               </Link>
             </div>

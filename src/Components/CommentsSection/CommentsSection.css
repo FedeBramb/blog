@@ -1,0 +1,40 @@
+.comments-view {
+    width: 65vw;
+    
+    margin-top: 10vh;
+    
+}
+
+.text-gradient {
+    background-color: #00a4aa;
+    background-image: linear-gradient(45deg, #00a4aa, #00073b);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.line {
+    margin-bottom: 3vh;
+}
+
+.username {
+    margin-bottom: 10px;
+}
+
+.comment {
+    margin-bottom: 10px;
+}
+
+.comment-container button {
+    margin-bottom: 10px;
+}
+.input-container {
+    display: block;
+}
+
+.rating {
+    margin-bottom: 2vh;
+}
+.username-input {
+    width: 10%;
+}

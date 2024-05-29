@@ -14,6 +14,7 @@ import RecipesPrev from './Components/RecipesPrev/RecipesPrev.js';
 import NewsBar from './Components/NewsBar/NewsBar.js';
 import CookBook from './Components/CookBook/CookBook.js';
 import Recipe from './Components/Recipe/Recipe.js';
+import CommentsSection from './Components/CommentsSection/CommentsSection.js';
 import Footer from './Container/Footer/Footer.js';
 
 import RenderIfVisible from 'react-render-if-visible';
@@ -48,10 +49,12 @@ function App() {
           }>
           </Route>
           <Route path="/cookbook" element={
-            <CookBook/>}>
+            <CookBook />}>
           </Route>
           <Route path="/cookbook/:recipeName" element={
-            <Recipe/>}>
+            <Recipe>
+              <CommentsSection />
+            </Recipe>}>
           </Route>
         </Routes>
         <Footer>

@@ -57,17 +57,17 @@
 }
 
 .title-card {
-    text-transform: uppercase;
+    
     font-size: clamp(12px, 3vw, 36px);
     margin-bottom: 2%;
-    color: #ffffff;
+    color: aliceblue;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     text-decoration: none;
 }
 
 .read-button {
     background-color: transparent;
-    color: #ffffff;
+    color: aliceblue;
     border: 2px solid #fff;
     padding: 5px 5px;
     border-radius: 5px;

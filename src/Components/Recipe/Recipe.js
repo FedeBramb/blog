@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import useRecipeData from '../../hooks/useRecipeData.js';
 import './Recipe.css';
 
-const Recipe = ({ article }) => {
+const Recipe = ({ article, children }) => {
   const { recipeName } = useParams();
   const recipeData = useRecipeData();
   
@@ -21,7 +21,7 @@ const Recipe = ({ article }) => {
         {recipe.title}
         <hr className="title-hr" />
       </h1>
-      <div className="video_section">
+      <div className="video-section">
         <iframe
           src={recipe.video}
           title="YouTube video player"
@@ -55,12 +55,32 @@ const Recipe = ({ article }) => {
         </div>
         <div className="instructions">
           {recipe.instructions.map((p, index) => (
-            <p key={index} className="instructions-p">{p}</p>
+            <li key={`li-${index}`} className="instructions-p">{p}</li>
           ))}
         </div>
       </div>
+      {children}
     </div>
   );
 }
 
 export default Recipe;
+
+
+/* 
+
+#UI
+1. Form di commento: Una sezione dove gli utenti possono inserire i loro commenti.
+
+2. Visualizzazione dei commenti: Un'area per visualizzare i commenti esistenti.
+
+3. Controlli di moderazione: Se desideri consentire ai proprietari del blog di moderare i commenti,
+potresti avere pulsanti o opzioni per eliminare o nascondere i commenti inappropriati. 
+
+#JS
+1. Gestione degli eventi: Scrivi codice JavaScript per gestire l'invio dei commenti 
+e l'aggiornamento dell'interfaccia utente quando vengono aggiunti nuovi commenti.
+
+2. Validazione del modulo: Verifica che i campi del modulo di commento siano 
+compilati correttamente prima di consentire l'invio.
+*/
