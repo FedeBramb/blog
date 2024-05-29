@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/blog/static/css/main.fac71825.css",
-    "main.js": "/blog/static/js/main.fa4add66.js",
+    "main.js": "/blog/static/js/main.6036b2b0.js",
     "static/js/453.4d1e5ba5.chunk.js": "/blog/static/js/453.4d1e5ba5.chunk.js",
     "static/media/hummus.webp": "/blog/static/media/hummus.8fe22ad6b5e72f483623.webp",
     "static/media/atomahawk.webp": "/blog/static/media/atomahawk.0a66ebc3bd22380bcef6.webp",
@@ -39,16 +39,18 @@
     "static/media/foodprofit.webp": "/blog/static/media/foodprofit.70aa4eb9009685fa41f4.webp",
     "static/media/kinder.webp": "/blog/static/media/kinder.7c6d32d082d1845deb7d.webp",
     "static/media/glassaSpecchio.webp": "/blog/static/media/glassaSpecchio.5f8b3bf4cbb72cd671cb.webp",
+    "static/media/logo.webp": "/blog/static/media/logo.f075d7f46ca76972f37d.webp",
     "static/media/logoMobile.webp": "/blog/static/media/logoMobile.57c7d3dee84e5e92601a.webp",
+    "static/media/icon-logo.webp": "/blog/static/media/icon-logo.8e3280691ae77faae008.webp",
     "static/media/logo-icon.webp": "/blog/static/media/logo-icon.787f6d276fe93251bf99.webp",
     "index.html": "/blog/index.html",
     "static/media/down-arrow.svg": "/blog/static/media/down-arrow.1edfab86f389055c97b8.svg",
     "main.fac71825.css.map": "/blog/static/css/main.fac71825.css.map",
-    "main.fa4add66.js.map": "/blog/static/js/main.fa4add66.js.map",
+    "main.6036b2b0.js.map": "/blog/static/js/main.6036b2b0.js.map",
     "453.4d1e5ba5.chunk.js.map": "/blog/static/js/453.4d1e5ba5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fac71825.css",
-    "static/js/main.fa4add66.js"
+    "static/js/main.6036b2b0.js"
   ]
 }
