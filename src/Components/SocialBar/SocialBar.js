@@ -11,12 +11,12 @@ function SocialBar({ position, children }) {
       {children}
       {position === 'footer' && <img src={logoIcon} alt="Logo" className="logo-image" />}
       <div className="icons">
-        <a href="http://google.com" className="social-icon"><i className="fa-brands fa-facebook"></i></a>
-        <a href="http://google.com" className="social-icon"><i className="fa-brands fa-instagram"></i></a>
-        <a href="http://google.com" className="social-icon"><i className="fab fa-twitter"></i></a>
-        <a href="http://google.com" className="social-icon"><i className="fab fa-linkedin-in"></i></a>
-        <a href="http://google.com" className="social-icon"><i className="fab fa-youtube"></i></a>
-        <a href="http://google.com" className="social-icon"><i className="fab fa-pinterest-p"></i></a>
+        <a href="http://google.com" className="social-icon" aria-label="Facebook"><i className="fa-brands fa-facebook"></i></a>
+        <a href="http://google.com" className="social-icon" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
+        <a href="http://google.com" className="social-icon" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
+        <a href="http://google.com" className="social-icon" aria-label="Linkedin"><i className="fab fa-linkedin-in"></i></a>
+        <a href="http://google.com" className="social-icon" aria-label="YouTube"><i className="fab fa-youtube"></i></a>
+        <a href="http://google.com" className="social-icon" aria-label="Pinterest"><i className="fab fa-pinterest-p"></i></a>
       </div>
     </div>
   );
