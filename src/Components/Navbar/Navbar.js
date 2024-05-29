@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import { Link } from 'react-router-dom';
 
-import logo from '../../assets/imagesLogo/logo.png';
+import logo from '../../assets/imagesLogo/logo.webp';
 import logoMobile from '../../assets/imagesLogo/logoMobile.webp';
 
 import './Navbar.css';
