@@ -13,15 +13,18 @@ const CommentsSection = () => {
     const [inputValue, setInputValue] = useState("");
     const [username, setUsername] = useState("");
     const [rating, setRating ] = useState(0);
-    const [comments, setComments] = useState([]);
+    const [comments, setComments] = useState([{ username: "Fred", comment: "Bellissima ricetta complimenti!!!", rating: 5 }, { username: "Arci", comment: "Devo Assolutamente provarla! Sembra fantastica!", rating: 5 }]);
 
     useEffect(() => {
         // Recupera i commenti salvati dal localStorage all'avvio del componente
         const storedComments = localStorage.getItem('comments');
+        console.log(storedComments);
         if (storedComments) {
-            setComments(JSON.parse(storedComments));
+            const parsedComments = JSON.parse(storedComments);
+            setComments([...comments, ...parsedComments]);
         }
     }, []); // Esegui solo all'avvio
+    
 
     const handleUsernameChange = (event) => {
         setUsername(event.target.value);
@@ -52,9 +55,12 @@ const CommentsSection = () => {
     }
 
     const handleDelete = (index) => {
-        const updateComments = comments.filter((_, i) => i !== index);
-        setComments(updateComments);
+        const updatedComments = comments.filter((_, i) => i !== index);
+        setComments(updatedComments);
+        // Aggiorna il localStorage con i commenti aggiornati
+        localStorage.setItem('comments', JSON.stringify(updatedComments));
     }
+    
 
     // () => handleDelete(index) altrimenti verrebbe chiamata durante il rendering.
     return (

@@ -80,7 +80,6 @@ function Carousel() {
               </Link>
             </div>
           </SwiperSlide>
-            
         ))}
       </Swiper>
       <LazyLoadImage src={caffe} alt='' className='caffe' />
