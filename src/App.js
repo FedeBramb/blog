@@ -43,7 +43,6 @@ function App() {
                     </RenderIfVisible>
                     <RenderIfVisible defaultHeight="70%" visibleOffset="50">
                       <NewsBar />
-                      {console.log('RecipesPrev è presente nella DOM')}
                     </RenderIfVisible>
                   </Center>
               </Middle>
