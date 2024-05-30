@@ -1,6 +1,9 @@
 import React from "react";
+
 import { useParams } from 'react-router-dom';
+
 import useRecipeData from '../../hooks/useRecipeData.js';
+
 import './Recipe.css';
 
 const Recipe = ({ article, children }) => {

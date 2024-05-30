@@ -1,7 +1,11 @@
 import React from "react";
-import useRecipeImages from '../../hooks/useRecipeImages.js';
+
 import { Link } from "react-router-dom";
+
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+
+import useRecipeImages from '../../hooks/useRecipeImages.js';
+
 import './RecipesPrev.css';
 
 function RecipesPrev() {

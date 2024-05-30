@@ -37,13 +37,17 @@ function App() {
             <>
               <Carousel />
               <Middle>
-                <RenderIfVisible defaultHeight="78%" visibleOffset="50">
                   <Center>
-                    <RecipesPrev />
-                    <NewsBar />
+                    <RenderIfVisible defaultHeight="70%" visibleOffset="50">
+                      <RecipesPrev />
+                    </RenderIfVisible>
+                    <RenderIfVisible defaultHeight="70%" visibleOffset="50">
+                      <NewsBar />
+                      {console.log('RecipesPrev è presente nella DOM')}
+                    </RenderIfVisible>
                   </Center>
-                </RenderIfVisible>
-              </Middle></>
+              </Middle>
+            </>
           }>
           </Route>
           <Route path="/cookbook" element={
@@ -52,12 +56,14 @@ function App() {
           <Route path="/cookbook/:recipeName" element={
             <Recipe>
               <CommentsSection />
-            </Recipe>}>
+            </Recipe>
+          }>
           </Route>
         </Routes>
         <Footer>
           <SocialBar position="footer" />
         </Footer>
+      
       </div>
     
   );

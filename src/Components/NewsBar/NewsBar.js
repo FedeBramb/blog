@@ -1,11 +1,13 @@
 import React from 'react';
-import './NewsBar.css';
+
 import glassa from '../../assets/imagesNews/glassaSpecchio.webp';
 import chefAzi from '../../assets/imagesNews/chefAzi.webp';
 import madeItaly from '../../assets/imagesNews/madeinitaly.webp';
 import streetfood from '../../assets/imagesNews/streetfood.webp';
 import foodprofit from '../../assets/imagesNews/foodprofit.webp';
 import kinder from '../../assets/imagesNews/kinder.webp';
+
+import './NewsBar.css';
 
 const newsLinks = [
   {

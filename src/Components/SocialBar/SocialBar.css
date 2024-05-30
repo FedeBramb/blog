@@ -4,9 +4,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1vh 11vw 0.5vh 11vw;
+    padding: 0 11vw 0 11vw;
 }
-
 
 .sticky {
     position: -webkit-sticky; /* Safari */
@@ -25,6 +24,7 @@
     display: flex;
     gap: 10px;
 }
+
 
 @media screen and (max-width: 880px) {
     .social-bar {
@@ -46,7 +46,9 @@
 }
 
 .social-bar-footer {
+    width: 100%;
     margin-top: 4%;
+    padding: 1vh 11vw 1vh 11vw;
 }
 
 .social-bar-footer a {
