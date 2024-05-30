@@ -23,7 +23,7 @@ const CommentsSection = () => {
             const parsedComments = JSON.parse(storedComments);
             setComments([...comments, ...parsedComments]);
         }
-    }, []); // Esegui solo all'avvio
+    }, [comments]); // Esegui solo all'avvio
     
 
     const handleUsernameChange = (event) => {
