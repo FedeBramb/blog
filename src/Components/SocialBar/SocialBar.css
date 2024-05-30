@@ -15,14 +15,18 @@
 }
 
 .logo-image {
-    width: 5%;
-    min-width: 50px;
+    max-width: 81px;
     height: auto;
 }
 
 .icons {
     display: flex;
     gap: 10px;
+}
+
+.social-icon img {
+    width: 31px;
+    height: 31px;
 }
 
 

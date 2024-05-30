@@ -40,6 +40,11 @@
     border: none;
     cursor: pointer;
 }
+
+.search-icon {
+    width: 25px;
+    height: 25px;
+}
   
 .search-button i {
     color: #323232;
