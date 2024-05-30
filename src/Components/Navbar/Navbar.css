@@ -40,6 +40,7 @@
 .third {
   flex: 0;
   width: 25%;
+  height: auto;
 }
 
 .fourth {

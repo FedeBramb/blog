@@ -47,7 +47,7 @@ const SearchBar = () => {
           onChange={(e) => setSearchInput(e.target.value)}
         />
         <button type="submit" className="search-button" aria-label="Cerca">
-          <i className="fas fa-search" aria-hidden="true"></i>
+          <img src="https://icongr.am/fontawesome/search.svg?size=25&color=1f1f1f" alt="search-icon" className="search-icon"></img>
         </button>
       </form>
       {/*Controlliamo se il container è vuoto altrimenti non lo renderizziamo*/}

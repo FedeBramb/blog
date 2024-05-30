@@ -15,7 +15,6 @@
 .search-input {
     flex: 1;
     padding: 10px;
-    margin-right: 10px;
     font-size: 16px; /* Aumenta la dimensione del font */
     max-width: 400px; /* Limita la larghezza massima dell'input */
     background-color: #00a4aa;
@@ -38,16 +37,10 @@
 .search-button {
     padding: 10px 20px;
     background-color: #00a4aa;
-    color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
 }
   
-.search-button:hover {
-    background-color: #00a4aa;
-}
-
 .search-button i {
     color: #323232;
 }
