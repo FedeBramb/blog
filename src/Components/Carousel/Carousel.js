@@ -1,17 +1,18 @@
 import React from 'react';
-import useRecipeImages from '../../hooks/useRecipeImages.js'; // Hook
-
-import { Swiper, SwiperSlide } from 'swiper/react'; // libreria per slider
+// Hook per gestire le immagini
+import useRecipeImages from '../../hooks/useRecipeImages.js';
+// Libreria per Swiper
+import { Swiper, SwiperSlide } from 'swiper/react'; 
 import { Pagination, EffectCoverflow, Autoplay } from 'swiper/modules';
-
+// Foglio CSS per Swiper
 import 'swiper/swiper-bundle.css';
-
+// Componente Link per gestire i collegamenti
 import { Link } from 'react-router-dom';
-
+// Componente renderizza le immagini solo se sono visibili 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import './Carousel.css';
-
+// Immagini sullo sfondo del carosello
 import caffe from '../../assets/Carousel/caffe.webp';
 import ciambella from '../../assets/Carousel/ciambella.webp';
 

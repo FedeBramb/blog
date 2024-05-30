@@ -1,3 +1,4 @@
+/* Regole per .carousel */
 .carousel {
     position: relative;
     width: 78vw;
@@ -15,10 +16,11 @@
     }
 }
 
+/* Regole per .carousel-content */
 .carousel-content span {
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    font-size: 1 rem;
+    font-size: 1rem;
     color: #717171;
 }
 
@@ -37,7 +39,7 @@
 .carousel-content .carousel-hr {
     display: block;
     background: #00a4aa;
-    height:  0.25rem;
+    height: 0.25rem;
     width: 6.25rem;
     border: none;
     margin: 1.125rem 0 1.875rem 0;
@@ -47,8 +49,7 @@
     line-height: 1.6;
 }
 
-/*con inline-block gli elementi vengono visualizzati orrizzontalemente come quelli inline ma in questo modo
-  possiamo modificare le dimensioni */
+/* Regole per .slider-btn */
 .slider-btn {
     display: inline-block;
     color: #717171;
@@ -67,15 +68,16 @@
     color: #00a4aa;
 }
 
+/* Regole per .myswiper e .myswiper-slider */
 .myswiper {
     width: 100%;
 }
 
 .myswiper-slider {
-   width: 18.75rem;
-   height: 28.125rem;
-   background-size: cover;
-   background-position: center;
+    width: 18.75rem;
+    height: 28.125rem;
+    background-size: cover;
+    background-position: center;
 }
 
 .myswiper-slider div {
@@ -99,7 +101,7 @@
     filter: brightness(0.7);
 }
 
-/*sovrascrivere il valore di align-items del contenitore padre per un elemento specifico.*/
+/* Sovrascrivere il valore di align-items del contenitore padre per un elemento specifico */
 .swiper-slide-active div .slider-btn {
     align-self: flex-start;
 }
@@ -122,12 +124,13 @@
     color: #00a4aa;
 }
 
+/* Regole per swiper pagination */
 .swiper-pagination-bullet,
 .swiper-pagination-bullet-active {
     background: #fff;
 }
 
-/* Posizionamo le due immagini "sotto" gli altri elementi, abbassando lo z-index*/
+/* Posizionamento delle immagini di sfondo */
 .caffe {
     position: absolute;
     top: -2rem;

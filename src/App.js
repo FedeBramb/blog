@@ -29,9 +29,7 @@ function App() {
         <SocialBar position="header">
           <SearchBar />
         </SocialBar>
-        {/*Search Bar*/}
         <UpperBody>
-          {/*<Logo />*/}
           <Navbar />
         </UpperBody>
         <Routes>

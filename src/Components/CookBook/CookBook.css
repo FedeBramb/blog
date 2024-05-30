@@ -1,30 +1,43 @@
+/* Variabili CSS per valori ripetuti */
+:root {
+    --primary-color: aliceblue;
+    --secondary-color: rgba(0, 0, 0, 0.7);
+    --border-radius: 5px;
+    --transition-duration: 0.3s;
+}
+
+/* Regole per .cook-book */
 .cook-book {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr); /* Utilizzo di repeat per maggiore leggibilità */
     width: 78vw;
     justify-items: center;
     margin-bottom: 1%;
     gap: 5px;
 }
-  
+
+/* Regole per .card */
 .card {
-    height: auto; /* Utilizziamo l'altezza automatica per adattarsi al contenuto */
+    height: auto; /* Altezza automatica per adattarsi al contenuto */
     position: relative;
     margin-top: 35px; /* Margini uniformi */
 }
-  
+
+/* Regole per .poster-container */
 .poster-container {
-    width: 100%; /* Utilizziamo larghezza al 100% per riempire il contenitore padre */
+    width: 100%; /* Larghezza al 100% per riempire il contenitore padre */
     position: relative; /* Posizione relativa per consentire il posizionamento assoluto dei figli */
 }
-  
+
+/* Regole per .poster */
 .poster {
-    width: 100%; /* Utilizziamo altezza al 100% per adattare l'immagine al contenitore */
+    width: 100%; /* Larghezza al 100% per adattare l'immagine al contenitore */
     object-fit: cover; /* Per mantenere l'aspect ratio senza distorsione */
-    border-radius: 5px; /* Aggiungiamo bordi arrotondati */
+    border-radius: var(--border-radius); /* Utilizzo di variabile per bordi arrotondati */
     display: block;
 }
-  
+
+/* Regole per .title-container */
 .title-container {
     width: 100%; /* Larghezza al 100% per adattarsi al contenitore padre */
     height: 100%;
@@ -32,19 +45,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    border-radius: 5px;
+    border-radius: var(--border-radius); /* Utilizzo di variabile per bordi arrotondati */
     position: absolute;
     bottom: 0;
     left: 0; /* Allineamento a sinistra */
-    box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 5px 20px 3px var(--secondary-color);
     opacity: 0;
-    transition: opacity 0.3s; /* Aggiunta una transizione per l'opacità */
+    transition: opacity var(--transition-duration); /* Utilizzo di variabile per la durata della transizione */
 }
-  
+
+/* Regole per l'hover su .card */
 .card:hover .title-container {
     opacity: 1;
 }
-  
+
+/* Regole per .title-content */
 .title-content {
     width: 100%;
     padding: 20px; /* Aggiunta spaziatura interna */
@@ -52,29 +67,32 @@
     text-align: center;
 }
 
+/* Regole per .link-custom */
 .link-custom {
     text-decoration: none;
 }
 
+/* Regole per .title-card */
 .title-card {
-    
     font-size: clamp(12px, 3vw, 36px);
     margin-bottom: 2%;
-    color: aliceblue;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: var(--primary-color); /* Utilizzo di variabile per il colore */
+    text-shadow: 2px 2px 4px var(--secondary-color);
     text-decoration: none;
 }
 
+/* Regole per .read-button */
 .read-button {
     background-color: transparent;
-    color: aliceblue;
+    color: var(--primary-color); /* Utilizzo di variabile per il colore */
     border: 2px solid #fff;
     padding: 5px 5px;
-    border-radius: 5px;
+    border-radius: var(--border-radius); /* Utilizzo di variabile per bordi arrotondati */
     font-size: clamp(12px, 3vw, 20px);
     cursor: pointer;
     margin-top: 1%;
 }
+
   
 
 

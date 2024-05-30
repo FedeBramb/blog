@@ -11,12 +11,12 @@ function SocialBar({ position, children }) {
       {children}
       {position === 'footer' && <img src={logoIcon} alt="Logo" className="logo-image" />}
       <div className="icons">
-        <a href="http://google.com" className="social-icon" aria-label="Facebook"><i className="fa-brands fa-facebook"></i></a>
-        <a href="http://google.com" className="social-icon" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
-        <a href="http://google.com" className="social-icon" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
-        <a href="http://google.com" className="social-icon" aria-label="Linkedin"><i className="fab fa-linkedin-in"></i></a>
-        <a href="http://google.com" className="social-icon" aria-label="YouTube"><i className="fab fa-youtube"></i></a>
-        <a href="http://google.com" className="social-icon" aria-label="Pinterest"><i className="fab fa-pinterest-p"></i></a>
+        <a href="http://google.com" className="social-icon" aria-label="Facebook"><img src="https://icongr.am/fontawesome/facebook-square.svg?size=31&color=1f1f1f"></img></a>
+        <a href="http://google.com" className="social-icon" aria-label="Instagram"><img src="https://icongr.am/fontawesome/instagram.svg?size=31&color=1f1f1f"></img></a>
+        <a href="http://google.com" className="social-icon" aria-label="Whatsapp"><img src="https://icongr.am/fontawesome/whatsapp.svg?size=31&color=1f1f1f"></img></a>
+        <a href="http://google.com" className="social-icon" aria-label="Linkedin"><img src="https://icongr.am/fontawesome/linkedin-square.svg?size=31&color=1f1f1f"></img></a>
+        <a href="http://google.com" className="social-icon" aria-label="YouTube"><img src="https://icongr.am/fontawesome/youtube-square.svg?size=31&color=1f1f1f"></img></a>
+        <a href="http://google.com" className="social-icon" aria-label="Pinterest"><img src="https://icongr.am/fontawesome/pinterest-square.svg?size=31&color=1f1f1f"></img></a>
       </div>
     </div>
   );
