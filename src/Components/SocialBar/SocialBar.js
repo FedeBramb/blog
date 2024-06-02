@@ -9,7 +9,7 @@ function SocialBar({ position, children }) {
   return (
     <div className={`${containerClass} sticky social-bar`}>
       {children}
-      {position === 'footer' && <img src={logoIcon} alt="Logo" className="logo-image" />}
+      {position === 'footer' && <img src={logoIcon} alt="Logo" className="logo-image" width='55' height='52' />}
       <div className="icons">
         <a href="http://google.com" className="social-icon" aria-label="Facebook"><img src="https://icongr.am/fontawesome/facebook-square.svg?size=31&color=1f1f1f" alt="icon Facebook"></img></a>
         <a href="http://google.com" className="social-icon" aria-label="Instagram"><img src="https://icongr.am/fontawesome/instagram.svg?size=31&color=1f1f1f" alt="icon Instagram"></img></a>

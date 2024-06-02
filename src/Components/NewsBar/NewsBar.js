@@ -53,7 +53,7 @@ function NewsBar() {
       {newsLinks.map((news, index) => (
         <a href={news.url} className="image-link" key={index}>
           <div className="image-container">
-            <img src={news.image} alt={news.source} className="news-image" />
+            <img src={news.image} alt={news.source} className="news-image" width='279' height='156'/>
             <div className="overlayDiv">
               <span className='overText'>{news.source}</span>
             </div>
