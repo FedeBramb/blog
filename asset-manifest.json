@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/blog/static/css/main.7b307542.css",
-    "main.js": "/blog/static/js/main.c7a73460.js",
+    "main.css": "/blog/static/css/main.62812126.css",
+    "main.js": "/blog/static/js/main.2103c52f.js",
     "static/js/453.4d1e5ba5.chunk.js": "/blog/static/js/453.4d1e5ba5.chunk.js",
     "static/media/hummus.webp": "/blog/static/media/hummus.8fe22ad6b5e72f483623.webp",
     "static/media/atomahawk.webp": "/blog/static/media/atomahawk.0a66ebc3bd22380bcef6.webp",
@@ -29,28 +29,28 @@
     "static/media/macaronsCB.webp": "/blog/static/media/macaronsCB.dade3f262a98ac2f9a9f.webp",
     "static/media/donutsMiniature.webp": "/blog/static/media/donutsMiniature.42e888ab81b6428f32ac.webp",
     "static/media/pancakeMiniature.webp": "/blog/static/media/pancakeMiniature.8cd3a84b94296a71bccc.webp",
+    "static/media/streetfood.webp": "/blog/static/media/streetfood.6058953f402bd8def0f9.webp",
+    "static/media/madeinitaly.webp": "/blog/static/media/madeinitaly.eb18375a96a868e5db46.webp",
     "static/media/macaronsMiniature.webp": "/blog/static/media/macaronsMiniature.00c6f10968ec00078699.webp",
     "static/media/caffe.webp": "/blog/static/media/caffe.65f8e9e87e1d8273f775.webp",
-    "static/media/streetfood.webp": "/blog/static/media/streetfood.dfec9a0b4496a466c82f.webp",
-    "static/media/madeinitaly.webp": "/blog/static/media/madeinitaly.e28784c1643f1273ec8b.webp",
+    "static/media/foodprofit.webp": "/blog/static/media/foodprofit.9f703bddf685565c755a.webp",
     "static/media/ciambella.webp": "/blog/static/media/ciambella.64c760a96ebf4e37ff41.webp",
-    "static/media/chefAzi.webp": "/blog/static/media/chefAzi.9a17a221ceb01cc282ce.webp",
+    "static/media/kinder.webp": "/blog/static/media/kinder.34eb15dbacaa318ecee5.webp",
+    "static/media/glassaSpecchio.webp": "/blog/static/media/glassaSpecchio.7b56afe4a4cd3a6fc417.webp",
+    "static/media/chefAzi.webp": "/blog/static/media/chefAzi.4e7338c31d85eafee190.webp",
     "static/media/logo.png": "/blog/static/media/logo.d7cbf55607a13f89e84a.png",
-    "static/media/foodprofit.webp": "/blog/static/media/foodprofit.70aa4eb9009685fa41f4.webp",
-    "static/media/kinder.webp": "/blog/static/media/kinder.7c6d32d082d1845deb7d.webp",
-    "static/media/glassaSpecchio.webp": "/blog/static/media/glassaSpecchio.5f8b3bf4cbb72cd671cb.webp",
     "static/media/logo.webp": "/blog/static/media/logo.f075d7f46ca76972f37d.webp",
     "static/media/logoMobile.webp": "/blog/static/media/logoMobile.57c7d3dee84e5e92601a.webp",
     "static/media/icon-logo.webp": "/blog/static/media/icon-logo.8e3280691ae77faae008.webp",
     "static/media/logo-icon.webp": "/blog/static/media/logo-icon.787f6d276fe93251bf99.webp",
     "index.html": "/blog/index.html",
     "static/media/down-arrow.svg": "/blog/static/media/down-arrow.1edfab86f389055c97b8.svg",
-    "main.7b307542.css.map": "/blog/static/css/main.7b307542.css.map",
-    "main.c7a73460.js.map": "/blog/static/js/main.c7a73460.js.map",
+    "main.62812126.css.map": "/blog/static/css/main.62812126.css.map",
+    "main.2103c52f.js.map": "/blog/static/js/main.2103c52f.js.map",
     "453.4d1e5ba5.chunk.js.map": "/blog/static/js/453.4d1e5ba5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7b307542.css",
-    "static/js/main.c7a73460.js"
+    "static/css/main.62812126.css",
+    "static/js/main.2103c52f.js"
   ]
 }
