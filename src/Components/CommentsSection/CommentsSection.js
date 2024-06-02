@@ -16,14 +16,14 @@ const CommentsSection = () => {
     const [comments, setComments] = useState([{ username: "Fred", comment: "Bellissima ricetta complimenti!!!", rating: 5 }, { username: "Arci", comment: "Devo Assolutamente provarla! Sembra fantastica!", rating: 5 }]);
 
     useEffect(() => {
-        // Recupera i commenti salvati dal localStorage all'avvio del componente
         const storedComments = localStorage.getItem('comments');
         console.log(storedComments);
         if (storedComments) {
             const parsedComments = JSON.parse(storedComments);
-            setComments([...comments, ...parsedComments]);
+            setComments(parsedComments); // Utilizza solo i commenti salvati nel localStorage
         }
-    }, [comments]); // Esegui solo all'avvio
+    }, []);
+
     
 
     const handleUsernameChange = (event) => {
@@ -79,20 +79,26 @@ const CommentsSection = () => {
                     </div>
                 ))}
             </div>
-            <input 
-                type="text" 
-                className="username-input" 
-                placeholder="Username" 
-                value={username} 
-                onChange={handleUsernameChange} 
-            />
-            <input 
-                type="text" 
-                className="comment-input" 
-                placeholder="Commento" 
-                value={inputValue} 
-                onChange={handleInputChange} 
-            />
+            <div className='username-input-container'>
+                <label for="username">User:</label>
+                <input 
+                    type="text" 
+                    className="username-input" 
+                    placeholder="username..." 
+                    value={username} 
+                    onChange={handleUsernameChange} 
+                />
+            </div>
+            <div className='comment-input-container'>
+                <label for="message">Message:</label>
+                <input 
+                    type="text" 
+                    className="comment-input" 
+                    placeholder="commento..." 
+                    value={inputValue} 
+                    onChange={handleInputChange} 
+                />
+            </div>
             {/* handleRatingChange viene passata come prop onRatingChange al componente StarRating */}
             <StarRating onRatingChange={handleRatingChange} />
             <button className="button-input" onClick={handleSubmit}>Invia</button>

@@ -38,7 +38,7 @@ function App() {
               <Carousel />
               <Middle>
                   <Center>
-                    <RenderIfVisible defaultHeight="70%" visibleOffset="50">
+                    <RenderIfVisible defaultHeight="70%" visibleOffset="50" >
                       <RecipesPrev />
                     </RenderIfVisible>
                     <RenderIfVisible defaultHeight="70%" visibleOffset="50">

@@ -33,6 +33,28 @@
 .rating {
     margin-bottom: 2vh;
 }
-.username-input {
-    width: 10%;
+
+.username-input-container {
+    margin: 2vh 2vh 2vh 0;
 }
+
+label {
+    display: block;
+    color: #00a4aa;
+}
+
+.username-input {
+    width: 20%;
+}
+
+.comment-input {
+    width: 30%;
+    height: 10vh;
+}
+
+.comment-input::placeholder {
+    color: #498082; /* Colore del testo del placeholder */
+    font-size: 14px; /* Dimensione del testo del placeholder */
+    /* Altri stili desiderati per il placeholder */
+  }
+  

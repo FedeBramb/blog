@@ -4,6 +4,7 @@
     justify-content: center;
     width: 100%;
     gap: 12px;
+    margin: auto;
 }
 
 .recipeContainer  > :not(:last-child) {
@@ -54,7 +55,7 @@
     border: none; 
 }
 
-.section h5 {
+.section p {
     margin: 2% 1% 0 2%;
     text-align: left;
     font-weight: 350;

@@ -20,10 +20,10 @@ function RecipesPrev() {
                             <h1>{title}</h1>
                             <hr className="title-hr" />
                         </div>
-                        <Link to={`/cookbook/${key}`}>
+                        <Link to={`/cookbook/${key}`} aria-label={`Link to ${title}`}>
                             <LazyLoadImage key={`${title}-${index}`} src={require(`../../assets${image}`)} alt={`pic-${index}`} />
                         </Link>
-                        <h5>{description}</h5>
+                        <p>{description}</p>
                         <Link to={`/cookbook/${key}`}>
                             <button className="recipe-button">Leggi la ricetta</button>
                         </Link>
