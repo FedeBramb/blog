@@ -31,16 +31,17 @@
     height: 0;
     padding-bottom: 56.25%; /* Rapporto d'aspetto 16:9 */
     overflow: hidden;
-  }
+    min-width: 490px;
+    min-height: 270px;
+}
   
-  .video-section iframe {
+.video-section iframe {
     position: absolute;
     top: 0;
     left: 10%;
     width: 80%;
     height: 80%;
-  }
-  
+}
 
 .ingredients_and_details {
     width: 100%;
