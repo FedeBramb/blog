@@ -1,6 +1,7 @@
 import React from 'react';
 // Hook per gestire le immagini
 import useRecipeImages from '../../hooks/useRecipeImages.js';
+
 // Libreria per Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -77,7 +78,7 @@ function Carousel() {
           <SwiperSlide 
           key={recipeName}   
           className='myswiper-slider'>
-              <img src={require(`../../assets${image}`)} alt={"Recipe" + recipeName}></img>
+              <LazyLoadImage src={require(`../../assets${image}`)} alt={"Recipe" + recipeName} />
               <div>
                 <h2>{title}</h2>
                 <Link to={`/cookbook/${recipeName}`}>

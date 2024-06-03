@@ -38,7 +38,7 @@ function Navbar() {
         <React.Fragment>
           <Link to="/" className="nav-item first">HOME</Link>
           <Link to="/cookbook" className="nav-item second">RICETTE</Link>
-          <img src={logo} className='third' alt='logo'></img>
+          <Link to="/"><img src={logo} className='third' alt='logo'></img></Link>
           <Link to="/glossario" className="nav-item fourth">GLOSSARIO</Link>
           <Link to="/contatti" className="nav-item fifth">CONTATTI</Link>
         </React.Fragment>
