@@ -76,14 +76,21 @@
 .myswiper-slider {
     width: 18.75rem;
     height: 28.125rem;
-    background-size: cover;
-    background-position: center;
+    position: relative;
 }
 
 .myswiper-slider div {
     display: none;
     opacity: 0;
     padding-bottom: 0.625rem;
+    position: relative;
+}
+
+.myswiper-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
 }
 
 .swiper-slide-active div {
@@ -118,6 +125,7 @@
 
 .myswiper-slider button {
     margin: 1.25rem 1.5rem 3.5rem;
+    cursor: pointer;
 }
 
 .myswiper-slider button:hover {

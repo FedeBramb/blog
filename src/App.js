@@ -2,7 +2,6 @@ import React from 'react';
 
 // Componente principale che avvolge l'intera applicazione per fornire le funzionalità di routing.
 import { Routes, Route } from "react-router-dom";
-
 import SocialBar from './Components/SocialBar/SocialBar.js';
 import SearchBar from './Components/SearchBar/SearchBar.js';
 import UpperBody from './Container/UpperBody/UpperBody.js';
