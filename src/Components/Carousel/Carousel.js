@@ -1,33 +1,40 @@
 import React from 'react';
+
 // Hook per gestire le immagini
 import useRecipeImages from '../../hooks/useRecipeImages.js';
 
 // Libreria per Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import { Pagination, EffectCoverflow, Autoplay } from 'swiper/modules';
+
 // Foglio CSS per Swiper
 import 'swiper/swiper-bundle.css';
-import 'swiper/css/virtual';
+
 // Componente Link per gestire i collegamenti
 import { Link } from 'react-router-dom';
+
 // Componente renderizza le immagini solo se sono visibili 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-
-
 
 import './Carousel.css';
 // Immagini sullo sfondo del carosello
 import caffe from '../../assets/carouselBackground/caffe.webp';
 import ciambella from '../../assets/carouselBackground/ciambella.webp';
 
-
+/* Inseriamo le prime due immagini che andremo a mettere sullo sfondo.
+   Swiper:
+    _Pagination: visualizzazione della paginazione
+    _EffectCoverflow: immagine principale al centro ingrandita con a lati le altre immagini più piccole
+    _Autoplay: le immagini scorrono di un'unità ogni tot tempo
+    
+   SwiperSlide: applichiamo LazyLoadImage a ogni immagine, con un titolo e un pulsante in overlay */
 function Carousel() {
   const recipeImages = useRecipeImages();
   
   return (
     <div className='carousel'>
-      
+      <LazyLoadImage src={caffe} alt='' className='caffe' />
+      <LazyLoadImage src={ciambella} alt='' className='ciambella' />
       <div>
         <div className='carousel-content'>
           <span>discover</span>
@@ -87,10 +94,7 @@ function Carousel() {
               </div>
           </SwiperSlide>
         ))}
-      </Swiper>
-      <LazyLoadImage src={caffe} alt='' className='caffe' />
-      <LazyLoadImage src={ciambella} alt='' className='ciambella' />
-      
+      </Swiper>      
     </div>
   );
 }

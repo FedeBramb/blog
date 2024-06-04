@@ -15,15 +15,15 @@
 .search-input {
     flex: 1;
     padding: 10px;
-    font-size: 16px; /* Aumenta la dimensione del font */
-    max-width: 400px; /* Limita la larghezza massima dell'input */
+    font-size: 16px; 
+    max-width: 400px; 
     background-color: #00a4aa;
     border: 2px solid #00a4aa;
 }
 
 .search-input:focus {
-    outline: none; /* Rimuove l'outline di default durante la selezione */
-    border: 2px solid #00a4aa; /* Aggiunge il bordo durante il focus */
+    outline: none; 
+    border: 2px solid #00a4aa;
 }
 
 .search-input::-webkit-input-placeholder {

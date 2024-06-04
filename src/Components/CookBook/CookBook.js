@@ -14,7 +14,6 @@ const CookBook = () => {
   return (
     <div className='cook-book'>
       {recipes.map(([key, { title, imagesCookBook }], index) => {
-        console.log(imagesCookBook); // Aggiungi questo per loggare imagesCookBook
         return (
           <Link to={`/cookbook/${key}`} className='link-custom'>
             <div className='card' key={key}>

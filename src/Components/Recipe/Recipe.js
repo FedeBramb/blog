@@ -1,19 +1,20 @@
 import React from "react";
 
+/* Recupera il nome della ricetta dall'url */
 import { useParams } from 'react-router-dom';
 
 import useRecipeData from '../../hooks/useRecipeData.js';
 
 import './Recipe.css';
 
-const Recipe = ({ article, children }) => {
+
+/* Componente che renderizza la ricetta completa, prende come argomento  */
+const Recipe = ({ children }) => {
   const { recipeName } = useParams();
   const recipeData = useRecipeData();
   
-  // Usa recipeName dall'URL solo se l'articolo non è passato come prop
-  const recipe = article || recipeData[recipeName];
-  console.log(recipe);
-  // Assicurati che la ricetta esista prima di renderizzare il componente
+  const recipe = recipeData[recipeName];
+  // Gestione nel caso non esista la ricetta
   if (!recipe) {
     return <div>Ricetta non trovata!</div>;
   }
@@ -68,22 +69,3 @@ const Recipe = ({ article, children }) => {
 }
 
 export default Recipe;
-
-
-/* 
-
-#UI
-1. Form di commento: Una sezione dove gli utenti possono inserire i loro commenti.
-
-2. Visualizzazione dei commenti: Un'area per visualizzare i commenti esistenti.
-
-3. Controlli di moderazione: Se desideri consentire ai proprietari del blog di moderare i commenti,
-potresti avere pulsanti o opzioni per eliminare o nascondere i commenti inappropriati. 
-
-#JS
-1. Gestione degli eventi: Scrivi codice JavaScript per gestire l'invio dei commenti 
-e l'aggiornamento dell'interfaccia utente quando vengono aggiunti nuovi commenti.
-
-2. Validazione del modulo: Verifica che i campi del modulo di commento siano 
-compilati correttamente prima di consentire l'invio.
-*/

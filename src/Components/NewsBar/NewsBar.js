@@ -1,5 +1,6 @@
 import React from 'react';
 
+/* Immagini per le news */
 import glassa from '../../assets/imagesNews/glassaSpecchio.webp';
 import chefAzi from '../../assets/imagesNews/chefAzi.webp';
 import madeItaly from '../../assets/imagesNews/madeinitaly.webp';
@@ -9,6 +10,7 @@ import kinder from '../../assets/imagesNews/kinder.webp';
 
 import './NewsBar.css';
 
+/* Array di oggetti con proprietà link immagine e la fonte */
 const newsLinks = [
   {
     url: 'https://www.agrodolce.it/ricette/glassa-specchio-colorata',

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 import './SearchBar.css';
 
-
+/* Barra di ricerca */
 const SearchBar = () => {
   // Otteniamo oggetto contenente ogni oggetto ricetta
   const recipeData = useRecipeData(); 
@@ -15,7 +15,9 @@ const SearchBar = () => {
   // Inizializziamo state per le ricette filtrare in base alla ricerca
   const [filteredRecipes, setfilteredRecipes] = useState(Object.values(recipeData)); 
   
-  // Utilizziamo useEffect 
+  /* Se l'input è vuoto resettiamo lo state searchInput, altrimenti cerchiamo nei dati delle ricette
+     se è presente il nome della ricetta o un ingrediente della suddetta.
+     Utilizziamo useEffect quando cambiano il searchInput o recipeData */
   useEffect(() => {
     if (searchInput.trim() === '') {
       setfilteredRecipes([]);
@@ -29,6 +31,7 @@ const SearchBar = () => {
     }
   }, [searchInput, recipeData]);
 
+  /* Quando un utente clicca su un risultato resetta i due states */
   const handleResultClick = () => {
     setSearchInput('');
     setfilteredRecipes([]);

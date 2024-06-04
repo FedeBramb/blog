@@ -7,6 +7,7 @@
     margin: auto;
 }
 
+/* bordo base a tutti i figli tranne che all'ultimo */
 .recipeContainer  > :not(:last-child) {
     border-bottom: 1px solid black;
 }
@@ -55,26 +56,26 @@
     border: none; 
 }
 
+/* font-size: clamp dimensione minima, dimensione preferita, dimensione massima */
 .section p {
     margin: 2% 1% 0 2%;
     text-align: left;
     font-weight: 350;
-    font-size: clamp(1rem, 2.5vw, 1.2rem); /* dimensione minima, dimensione preferita, dimensione massima */
+    font-size: clamp(1rem, 2.5vw, 1.2rem); 
 }
 
 .recipe-button {
-    padding: 5px 10px; /* Aggiusta il padding per dimensioni desiderate */
-    background-color: #ffffff; /* Colore di sfondo del bottone */
-    color: rgb(25, 24, 32); /* Colore del testo */
-    border: 1px solid rgb(21, 21, 26); /* Bordo sottile nero */
+    padding: 5px 10px;
+    background-color: #ffffff; 
+    color: rgb(25, 24, 32); 
+    border: 1px solid rgb(21, 21, 26);
     margin-top: 6%;
     margin-bottom: 12%;
     
 }
   
 .recipe-button:hover {
-    background-color: #e0e0e0; /* Cambia il colore di sfondo al passaggio del mouse */
-    
+    background-color: #e0e0e0;
 }
 
 

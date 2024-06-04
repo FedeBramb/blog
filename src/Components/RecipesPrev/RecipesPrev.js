@@ -8,8 +8,11 @@ import useRecipeImages from '../../hooks/useRecipeImages.js';
 
 import './RecipesPrev.css';
 
+/* Componente per la visualizzazione delle tre anteprime delle ricette.
+    Chiamata alla funzione useRecipeImages per ottenere l'array delle immagini delle ricette,
+    iteriamo solo fra le prime tre immagini */
 function RecipesPrev() {
-    const recipeImages = useRecipeImages(); // Chiamata alla funzione useRecipeImages per ottenere l'array delle immagini delle ricette
+    const recipeImages = useRecipeImages(); 
     return (
         <div className="recipeContainer">
             {recipeImages.map(([key, {image, title, description}], index) => {
