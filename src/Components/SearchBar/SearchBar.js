@@ -14,7 +14,6 @@ const SearchBar = () => {
   const [searchInput, setSearchInput] = useState('');
   // Inizializziamo state per le ricette filtrare in base alla ricerca
   const [filteredRecipes, setfilteredRecipes] = useState(Object.values(recipeData)); 
-  
   /* Se l'input è vuoto resettiamo lo state searchInput, altrimenti cerchiamo nei dati delle ricette
      se è presente il nome della ricetta o un ingrediente della suddetta.
      Utilizziamo useEffect quando cambiano il searchInput o recipeData */
@@ -26,7 +25,6 @@ const SearchBar = () => {
         key.toLowerCase().includes(searchInput.toLowerCase()) ||
         recipe.ingredients.some(ingredient => ingredient.toLowerCase().includes(searchInput.toLowerCase()))
       );
-      console.log(setfilteredRecipes(results));
       setfilteredRecipes(results);
     }
   }, [searchInput, recipeData]);
@@ -42,7 +40,7 @@ const SearchBar = () => {
     <div className="search-form">
       <form>
         <input
-          type="text"
+          type="search"
           placeholder="Cerca ricetta o ingrediente..."
           title="Cerca per nome della ricetta o ingrediente. I risultati includeranno ricette con nomi o ingredienti corrispondenti."
           className="search-input"

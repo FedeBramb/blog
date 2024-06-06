@@ -10,16 +10,14 @@ import './CookBook.css';
 
 const CookBook = () => {
   const recipes = useRecipeImages();
-
   return (
     <div className='cook-book'>
       {recipes.map(([key, { title, imagesCookBook }], index) => {
         return (
-          <Link to={`/cookbook/${key}`} className='link-custom'>
-            <div className='card' key={key}>
+          <Link to={`/cookbook/${index}`} className='link-custom' key={key}>
+            <div className='card'>
               <div className='poster-container'>
                 <LazyLoadImage 
-                  key={`${title}-${index}`} 
                   src={require(`../../assets${imagesCookBook}`)} 
                   alt={`pic-${index}`}
                   className='poster'

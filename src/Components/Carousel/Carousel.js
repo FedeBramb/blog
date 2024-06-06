@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from "react";
 
 // Hook per gestire le immagini
 import useRecipeImages from '../../hooks/useRecipeImages.js';
@@ -30,7 +30,13 @@ import ciambella from '../../assets/carouselBackground/ciambella.webp';
    SwiperSlide: applichiamo LazyLoadImage a ogni immagine, con un titolo e un pulsante in overlay */
 function Carousel() {
   const recipeImages = useRecipeImages();
-  
+  console.log("render");
+
+  useEffect(() => {
+    console.log("ciao")
+  }, []);
+
+
   return (
     <div className='carousel'>
       <LazyLoadImage src={caffe} alt='' className='caffe' />

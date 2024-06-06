@@ -84,7 +84,7 @@ const CommentsSection = () => {
                 ))}
             </div>
             <div className='username-input-container'>
-                <label for="username">User:</label>
+                <label htmlFor="username">User:</label>
                 <input 
                     type="text" 
                     className="username-input" 
@@ -94,7 +94,7 @@ const CommentsSection = () => {
                 />
             </div>
             <div className='comment-input-container'>
-                <label for="message">Message:</label>
+                <label htmlFor="message">Message:</label>
                 <input 
                     type="text" 
                     className="comment-input" 

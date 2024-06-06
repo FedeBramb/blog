@@ -1,13 +1,12 @@
-import React from 'react';
+import React from "react";
 
 // Componente principale che avvolge l'intera applicazione per fornire le funzionalità di routing.
 import { Routes, Route } from "react-router-dom";
 
-
 import SocialBar from './Components/SocialBar/SocialBar.js';
 import SearchBar from './Components/SearchBar/SearchBar.js';
 import UpperBody from './Container/UpperBody/UpperBody.js';
-import Navbar from './Components/Navbar/Navbar.js';
+import Navbar from './Components/Navbar/Navbar.jsx';
 import Carousel from './Components/Carousel/Carousel.js';
 import Middle from './Container/Middle/Middle.js';
 import Center from './Container/Center/Center.js';
@@ -38,10 +37,10 @@ function App() {
               <Carousel />
               <Middle>
                   <Center>
-                    <RenderIfVisible defaultHeight="70%" visibleOffset="50" >
+                    <RenderIfVisible defaultHeight="700" visibleOffset="100" stayRendered="true">
                       <RecipesPrev />
                     </RenderIfVisible>
-                    <RenderIfVisible defaultHeight="70%" visibleOffset="50">
+                    <RenderIfVisible defaultHeight="500" visibleOffset="100" stayRendered="true">
                       <NewsBar />
                     </RenderIfVisible>
                   </Center>
