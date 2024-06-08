@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import logo from '../../assets/imagesLogo/logo.webp';
-import logoMobile from '../../assets/imagesLogo/logoMobile.webp';
 
 import './Navbar.css';
 
@@ -16,7 +15,7 @@ function Navbar() {
   // Cambia il boolean in base alla risoluzione della finestra
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 1196);
+      setIsSmallScreen(window.innerWidth < 800);
     };
 
     window.addEventListener('resize', handleResize);
@@ -36,16 +35,16 @@ function Navbar() {
     <div className={`navbar ${isSmallScreen && 'smallScreen'}`}>
       {!isSmallScreen && (
         <React.Fragment>
-          <Link to="/" className="nav-item first">HOME</Link>
-          <Link to="/cookbook" className="nav-item second">RICETTE</Link>
-          <Link to="/"><img src={logo} className='third' alt='logo'></img></Link>
-          <Link to="/glossario" className="nav-item fourth">GLOSSARIO</Link>
-          <Link to="/contatti" className="nav-item fifth">CONTATTI</Link>
+          <Link to="/" className="nav-item">HOME</Link>
+          <Link to="/cookbook" className="nav-item">RICETTE</Link>
+          <Link to="/" className='logo-big-container'><img src={logo} alt='logo'></img></Link>
+          <Link to="/glossario" className="nav-item">GLOSSARIO</Link>
+          <Link to="/contatti" className="nav-item">CONTATTI</Link>
         </React.Fragment>
       )}
       {isSmallScreen && (
         <React.Fragment>
-          <img src={logoMobile} className='logo-small-view' alt='logo'></img>
+          <img src={logo} className='logo-small-view' alt='logo'></img>
           <div className="dropcase">
             <button className="menu-button" onClick={toggleMenu}>
               MENU

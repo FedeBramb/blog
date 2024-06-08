@@ -1,15 +1,25 @@
 .navbar {
-  background-color: white;
-  width: 100%;
-  font-size: 1.0em;
-  min-width: 342px;
-  color: rgb(59, 65, 71);
-  padding: 0;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  background-color: white;
+  width: max(78%, 342px);
+  margin: auto;
+  font-size: 1.0em;
+  color: rgb(59, 65, 71);
+  border-bottom: 1px solid black;
 }
 
-@media screen and (max-width: 1196px) {
+.logo-big-container {
+  text-align: center;
+}
+
+.logo-big-container img {
+  width: 80%;
+  height: auto;
+}
+
+@media screen and (max-width: 800px) {
   .navbar {
     flex-direction: column;
   }
@@ -22,6 +32,12 @@
   background-size: 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: 20%;
+}
+
+/* Allinea a destra il testo negli ultimi due figli */
+.nav-item:nth-last-child(-n+2) {
+  text-align: right;
 }
 
 /* Rimuove la sottolineatura al passaggio del mouse */
@@ -30,43 +46,13 @@
   color: rgb(39, 39, 39);
 }
 
-/* flex: 1, l'elemento si espande per occupare più larghezza possibile */
-.first {
-  flex: 1;
-}
-
-.second {
-  flex: 1;
-}
-
-/* flex: 0, l'elemento non si espande */
-.third {
-  flex: 0; 
-  width: 299.51px;
-  height: 119.94px;
-}
-
-.fourth {
-  display: flex;
-  justify-content: flex-end;
-  flex: 1
-}
-
-.fifth {
-  display: flex;
-  justify-content: flex-end;
-  flex: 1;
-}
-
 .icon {
   margin-left: 0.5em;
   width: 20px;
 }
 
 .logo-small-view {
-  margin: auto;
-  width: 20%;
-  min-width: 112px;
+  width: 80%;
 }
 
 .dropcase {
@@ -83,7 +69,7 @@
   outline: none;
   border: none;
   font-size: 1.4rem;
-  margin-top: 2%;
+  margin: 2% 0 2% 0;
 }
 
 .menu-button:focus {

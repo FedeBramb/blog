@@ -14,12 +14,6 @@
   justify-content: center;
 }
 
-@media screen and (max-width: 1196px) {
-  .headerContainer {
-      flex-direction: column;
-      gap: 10px;
-  }
-}
 
 
 

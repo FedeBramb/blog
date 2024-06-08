@@ -3,12 +3,12 @@ import React from "react";
 // Componente principale che avvolge l'intera applicazione per fornire le funzionalità di routing.
 import { Routes, Route } from "react-router-dom";
 
+import Header from './Container/Header/Header.js';
 import SocialBar from './Components/SocialBar/SocialBar.js';
 import SearchBar from './Components/SearchBar/SearchBar.js';
-import UpperBody from './Container/UpperBody/UpperBody.js';
 import Navbar from './Components/Navbar/Navbar.jsx';
+import Body from "./Container/Body/Body.jsx";
 import Carousel from './Components/Carousel/Carousel.js';
-import Middle from './Container/Middle/Middle.js';
 import Center from './Container/Center/Center.js';
 import RecipesPrev from './Components/RecipesPrev/RecipesPrev.js';
 import NewsBar from './Components/NewsBar/NewsBar.js';
@@ -25,39 +25,40 @@ import './App.css';
 function App() {
   return (
       <div className='main_div'>
-        <SocialBar position="header">
-          <SearchBar />
-        </SocialBar>
-        <UpperBody>
+        <Header>
+          <SocialBar position="header">
+            <SearchBar />
+          </SocialBar>
           <Navbar />
-        </UpperBody>
-        <Routes>
-          <Route path="/" element={
-            <>
-              <Carousel />
-              <Middle>
-                  <Center>
-                    <RenderIfVisible defaultHeight="700" visibleOffset="100" stayRendered="true">
-                      <RecipesPrev />
-                    </RenderIfVisible>
-                    <RenderIfVisible defaultHeight="500" visibleOffset="100" stayRendered="true">
-                      <NewsBar />
-                    </RenderIfVisible>
-                  </Center>
-              </Middle>
-            </>
-          }>
-          </Route>
-          <Route path="/cookbook" element={
-            <CookBook />}>
-          </Route>
-          <Route path="/cookbook/:recipeName" element={
-            <Recipe>
-              <CommentsSection />
-            </Recipe>
-          }>
-          </Route>
-        </Routes>
+        </Header>
+        <Body>
+          <Routes>
+            <Route path="/" element={
+              <>
+                <Carousel />
+                <Center>
+                  <RenderIfVisible defaultHeight="700" visibleOffset="100" stayRendered="true">
+                    <RecipesPrev />
+                  </RenderIfVisible>
+                  <RenderIfVisible defaultHeight="500" visibleOffset="100" stayRendered="true">
+                    <NewsBar />
+                  </RenderIfVisible>
+                </Center>
+                
+              </>
+            }>
+            </Route>
+            <Route path="/cookbook" element={
+              <CookBook />}>
+            </Route>
+            <Route path="/cookbook/:recipeName" element={
+              <Recipe>
+                <CommentsSection />
+              </Recipe>
+            }>
+            </Route>
+          </Routes>
+        </Body>
         <Footer>
           <SocialBar position="footer" />
         </Footer>

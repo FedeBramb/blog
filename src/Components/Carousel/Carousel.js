@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React from 'react';
 
 // Hook per gestire le immagini
 import useRecipeImages from '../../hooks/useRecipeImages.js';
@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, EffectCoverflow, Autoplay } from 'swiper/modules';
 
 // Foglio CSS per Swiper
-import 'swiper/swiper-bundle.css';
+import 'swiper/css/bundle';
 
 // Componente Link per gestire i collegamenti
 import { Link } from 'react-router-dom';
@@ -30,12 +30,6 @@ import ciambella from '../../assets/carouselBackground/ciambella.webp';
    SwiperSlide: applichiamo LazyLoadImage a ogni immagine, con un titolo e un pulsante in overlay */
 function Carousel() {
   const recipeImages = useRecipeImages();
-  console.log("render");
-
-  useEffect(() => {
-    console.log("ciao")
-  }, []);
-
 
   return (
     <div className='carousel'>
@@ -63,35 +57,32 @@ function Carousel() {
         slideShadows: true,
       }}
       loop={true}
+      loopAddBlankSlides={true}
       pagination={{clickable: true}}
       autoplay={{
-        delay: 5000,
+        delay: 3000,
         disableOnInteraction: false
       }}
       breakpoints={{
         640: {
-          slidesPerView: 2,
-          slidesPerGroup: 1
+          slidesPerView: 2
         },
         768: {
-          slidesPerView: 1,
-          slidesPerGroup: 1
+          slidesPerView: 1
         },
-        1100: {
-          slidesPerView: 2,
-          slidesPerGroup: 1
+        1024: {
+          slidesPerView: 2
         },
-        1500: {
-          slidesPerView: 3,
-          slidesPerGroup: 1
+        1560: {
+          slidesPerView: 3
         }
       }}
       >
-        {recipeImages.map(([recipeName, { title, image }], index) => (
+        {recipeImages.map(([recipeName, { title, image }]) => (
           <SwiperSlide 
           key={recipeName}   
           className='myswiper-slider'>
-              <LazyLoadImage src={require(`../../assets${image}`)} alt={"Recipe" + recipeName} />
+              <img src={require(`../../assets${image}`)} alt={"Recipe" + recipeName} />
               <div>
                 <h2>{title}</h2>
                 <Link to={`/cookbook/${recipeName}`}>
