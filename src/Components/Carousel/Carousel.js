@@ -73,7 +73,7 @@ function Carousel() {
         1024: {
           slidesPerView: 2
         },
-        1560: {
+        1500: {
           slidesPerView: 3
         }
       }}
