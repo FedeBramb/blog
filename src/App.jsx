@@ -1,6 +1,7 @@
 import React from "react";
 
 // Componente principale che avvolge l'intera applicazione per fornire le funzionalità di routing.
+// Ho utilizzato HashRouter perchè GitHub Pages sembra non supportare a pieno BrowserRouter
 import { Routes, Route } from "react-router-dom";
 
 import Header from './Container/Header/Header.js';
@@ -44,19 +45,18 @@ function App() {
                     <NewsBar />
                   </RenderIfVisible>
                 </Center>
-                
               </>
             }>
             </Route>
-            <Route path="/cookbook" element={
-              <CookBook />}>
+            <Route path="/cookbook" element={<CookBook />}>
+              <Route path="/cookbook/:recipeName" element={
+                <Recipe>
+                  <CommentsSection />
+                </Recipe>}>
+              </Route>
+            
             </Route>
-            <Route path="/cookbook/:recipeName" element={
-              <Recipe>
-                <CommentsSection />
-              </Recipe>
-            }>
-            </Route>
+            
           </Routes>
         </Body>
         <Footer>

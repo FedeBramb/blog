@@ -1,11 +1,11 @@
-import React from 'react';
+import { useEffect } from 'react';
 
 // Hook per gestire le immagini
 import useRecipeImages from '../../hooks/useRecipeImages.js';
 
 // Libreria per Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, EffectCoverflow, Autoplay } from 'swiper/modules';
+import { Pagination, EffectCoverflow, Autoplay, Virtual } from 'swiper/modules';
 
 // Foglio CSS per Swiper
 import 'swiper/css/bundle';
@@ -30,6 +30,23 @@ import ciambella from '../../assets/carouselBackground/ciambella.webp';
    SwiperSlide: applichiamo LazyLoadImage a ogni immagine, con un titolo e un pulsante in overlay */
 function Carousel() {
   const recipeImages = useRecipeImages();
+
+  useEffect(() => {
+    // Precarichiamo le immagini aggiungendo un link con "preload" a index.HTML
+    const preloadImages = recipeImages.map(([recipeName, { image }]) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = require(`../../assets${image}`);
+      document.head.appendChild(link);
+      return link;
+    });
+
+    // Clean up on unmount
+    return () => {
+      preloadImages.forEach(link => document.head.removeChild(link));
+    };
+  }, [recipeImages]);
 
   return (
     <div className='carousel'>
@@ -78,10 +95,11 @@ function Carousel() {
         }
       }}
       >
-        {recipeImages.map(([recipeName, { title, image }]) => (
+        {recipeImages.map(([recipeName, { title, image }], index) => (
           <SwiperSlide 
-          key={recipeName}   
-          className='myswiper-slider'>
+          key={recipeName}
+          className='myswiper-slider'
+          >
               <img src={require(`../../assets${image}`)} alt={"Recipe" + recipeName} />
               <div>
                 <h2>{title}</h2>

@@ -1,4 +1,3 @@
-/* Impostiamo posizione relativa per posizionare elementi in overlay */
 .carousel {
     position: relative;
     width: 78vw;
@@ -10,13 +9,17 @@
 }
 
 /* Posizionamento delle immagini di sfondo z-index basso per essere posizionate
- al di sotto del restante contenuto*/
+ al di sotto del restante contenuto */
 .caffe {
     position: absolute;
     top: -2rem;
     left: -7rem;
     z-index: -1;
     opacity: 0.3;
+    width: 600px; /* Dimensioni esplicite */
+    height: 400px; /* Dimensioni esplicite */
+    max-width: 100%; /* Adattamento alla vista */
+    object-fit: cover;
 }
 
 .ciambella {
@@ -25,6 +28,10 @@
     right: -9rem;
     z-index: -1;
     opacity: 0.6;
+    width: 600px; /* Dimensioni esplicite */
+    height: 400px; /* Dimensioni esplicite */
+    max-width: 100%; /* Adattamento alla vista */
+    object-fit: cover;
 }
 
 @media screen and (min-width: 48rem) {
@@ -32,6 +39,10 @@
         display: flex;
         align-items: center;
     }
+}
+
+.carousel-content {
+    /* Puoi aggiungere altri stili qui */
 }
 
 .carousel-content span {
@@ -66,9 +77,6 @@
     line-height: 1.6;
 }
 
-/* inline-block si comporta come sia elemento inline che block
-    si utilizza per avere un elemento inline ma con la  possibilità 
-    di dare delle dimensioni spcifiche */
 .slider-btn {
     display: inline-block;
     color: #717171;
@@ -97,7 +105,7 @@
     position: relative;
 }
 
-/* Rendiamo "invisibile"*/
+/* Rendiamo "invisibile" */
 .myswiper-slider div {
     display: none;
     opacity: 0;
@@ -105,7 +113,7 @@
     position: relative;
 }
 
-/* cover per coprire tutta la superficie del contenitore genitore*/
+/* cover per coprire tutta la superficie del contenitore genitore */
 .myswiper-slider img {
     width: 100%;
     height: 100%;
