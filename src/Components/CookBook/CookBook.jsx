@@ -14,7 +14,7 @@ const CookBook = () => {
     <div className='cook-book'>
       {recipes.map(([key, { title, imagesCookBook }], index) => {
         return (
-          <Link to={`/cookbook/${index}`} className='link-custom' key={key}>
+          <Link to={`/cookbook/${key}`} className='link-custom' key={key}>
             <div className='card'>
               <div className='poster-container'>
                 <LazyLoadImage 

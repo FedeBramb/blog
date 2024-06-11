@@ -4,17 +4,17 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Header from './Container/Header/Header.js';
-import SocialBar from './Components/SocialBar/SocialBar.js';
-import SearchBar from './Components/SearchBar/SearchBar.js';
+import SocialBar from './Components/SocialBar/SocialBar.jsx';
+import SearchBar from './Components/SearchBar/SearchBar.jsx';
 import Navbar from './Components/Navbar/Navbar.jsx';
 import Body from "./Container/Body/Body.jsx";
-import Carousel from './Components/Carousel/Carousel.js';
+import Carousel from './Components/Carousel/Carousel.jsx';
 import Center from './Container/Center/Center.js';
-import RecipesPrev from './Components/RecipesPrev/RecipesPrev.js';
-import NewsBar from './Components/NewsBar/NewsBar.js';
-import CookBook from './Components/CookBook/CookBook.js';
-import Recipe from './Components/Recipe/Recipe.js';
-import CommentsSection from './Components/CommentsSection/CommentsSection.js';
+import RecipesPrev from './Components/RecipesPrev/RecipesPrev.jsx';
+import NewsBar from './Components/NewsBar/NewsBar.jsx';
+import CookBook from './Components/CookBook/CookBook.jsx';
+import Recipe from './Components/Recipe/Recipe.jsx';
+import CommentsSection from './Components/CommentsSection/CommentsSection.jsx';
 import Footer from './Container/Footer/Footer.js';
 
 import RenderIfVisible from 'react-render-if-visible';
