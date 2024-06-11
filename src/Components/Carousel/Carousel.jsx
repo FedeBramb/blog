@@ -5,7 +5,7 @@ import useRecipeImages from '../../hooks/useRecipeImages.js';
 
 // Libreria per Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, EffectCoverflow, Autoplay, Virtual } from 'swiper/modules';
+import { Pagination, EffectCoverflow, Autoplay} from 'swiper/modules';
 
 // Foglio CSS per Swiper
 import 'swiper/css/bundle';
